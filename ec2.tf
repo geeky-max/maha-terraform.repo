@@ -5,6 +5,7 @@ resource "aws_instance" "mahaawsserver" {
   tags = {
     Name = "hcltech-aws-maha-instance"
     Env = "Prod"
+    Name = "Test-Tags
   }
 }
 
