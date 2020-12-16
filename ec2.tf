@@ -1,15 +1,16 @@
 resource "aws_instance" "mahaawsserver" {
-  ami = "ami-0603cbe34fd08cb81"
+  ami = "ami-03d64741867e7bb94"
   instance_type = "t2.micro"
+  key_name = "hcl-maha"
 
   tags = {
-    Name = "hcltech-aws-maha-instance"
+    Name = "maha-hcltech-aws-ansible-instance"
     Env = "Prod"
-    Name = "Test-Tags"
-    Env = "Pre-Prod"
+     }
+provisioner "local-exec" {
+    command = "echo The servers IP address is ${self.public_ip} && echo ${self.public_ip} > /root/inventory"
   }
 }
-
 output "mahaawsserver-ip" {
   value = "${aws_instance.mahaawsserver.public_ip}"
 }
