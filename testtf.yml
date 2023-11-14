@@ -1,5 +1,5 @@
 ---
-- hosts: Satellite
+- hosts: aap2eda.lab.geekymax.com
   collections:
     - cloud.terraform
   tasks:
