@@ -1,6 +1,6 @@
 - name: terraform Demo
   hosts: satellite
   tasks:
-     - name: Basic deploy of a service
-       cloud.terraform:
-       project_path: '.'
+    - name: Basic deploy of a service
+      cloud.terraform:
+      project_path: '.'
