@@ -1,5 +1,7 @@
-- name: terraform Demo
-  hosts: Satellite
+---
+- hosts: localhost
+  collections:
+    - cloud.terraform
   tasks:
     - name: Basic deploy of a service
       cloud.terraform:
