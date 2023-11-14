@@ -3,4 +3,4 @@
   tasks:
     - name: Basic deploy of a service
       cloud.terraform:
-      project_path: '.'
+        project_path: '.'
