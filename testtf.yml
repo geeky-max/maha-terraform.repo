@@ -4,5 +4,5 @@
     - cloud.terraform
   tasks:
     - name: Basic deploy of a service
-      cloud.terraform:
+      cloud.terraform.terraform:
         project_path: '.'
